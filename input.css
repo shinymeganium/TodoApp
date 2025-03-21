@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@media (width <= 40rem) {
+    body {
+        background-image: url("images/bg-mobile-light.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+}
