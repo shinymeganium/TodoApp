@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
-@media (width <= 40rem) {
-    body {
-        background-image: url("images/bg-mobile-light.jpg");
-        background-repeat: no-repeat;
-        background-position: center top;
-    }
-
+@theme {
+    --color-susy-light-gray: #f8f8f8;
+    --color-susy-darker-light-gray: #e6e5eb;
 }

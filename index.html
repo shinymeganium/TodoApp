@@ -7,13 +7,56 @@
     <title>Todo app</title>
 </head>
 <body>
-    <header>
-        <h1>TODO</h1>
-    </header>
-    <div class="">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+    <div class="h-screen bg-susy-light-gray flex justify-center">
+        <div class="px-5 py-10 bg-[url(images/bg-mobile-light.jpg)] bg-no-repeat w-[375px] flex flex-col">
+
+            <header class="flex justify-between">
+                <h1 class="text-white text-3xl font-semibold tracking-[.4em] inline-block">TODO</h1>
+                <img class="scale-65" src="images/icon-moon.svg" alt="">
+            </header>
+
+            <main>
+                <!-- mr-2 (between check and list item) -->
+                <section class="bg-white rounded-sm my-5 p-4 flex justify-start">
+                    <img class="w-[20px] h-[20px] border rounded-full border-susy-darker-light-gray" src="images/icon-check.svg" alt="check">
+                    <input class="text-[11px] mx-3" type="text" name="create-todo" id="create" size="40" placeholder="Create a new todo..">
+                </section>
+
+                <!-- bg color change for check when item done
+                 overlinetext
+                 change font color
+                 unbold text -->
+                <ul class="divide-y divide-susy-darker-light-gray">
+                    <li class="rounded-sm bg-white text-[11px] p-4 flex justify-between">
+                        Complete Todo App on Frontend Mentor
+                    </li>
+                    <li class="rounded-sm bg-white text-[11px] p-4 flex justify-between">
+                        Complete Todo App on Frontend Mentor
+                    </li>
+                    <li class="rounded-sm bg-white text-[11px] p-4 flex justify-between">
+                        <span><span id="items-left">x</span> items left</span>
+                        <button class="text-[11px] inline-block" id="clear">Clear Completed</button>
+                    </li>
+                </ul>
+
+                <nav class="bg-white rounded-sm text-xs my-5 p-4 flex flex-row justify-evenly">
+                    <a href="">All</a>
+                    <a href="">Active</a>
+                    <a href="">Completed</a>
+                </nav>
+            </main>
+
+            <footer class="text-xs m-5 flex justify-center">
+                <p class="text-red-500">Drag and drop to reorder list</p>
+            </footer>
+        </div>
+
+
     </div>
+    <!-- <div class="">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div> -->
 </body>
 </html>
 
