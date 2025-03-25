@@ -7,7 +7,7 @@
     <title>Todo app</title>
 </head>
 <body>
-    <div class="h-screen bg-susy-light-gray flex justify-center">
+    <div class="h-screen s-light-gray flex justify-center">
         <div class="px-5 py-10 bg-[url(images/bg-mobile-light.jpg)] bg-no-repeat w-[375px] flex flex-col">
 
             <header class="flex justify-between">
@@ -18,7 +18,11 @@
             <main>
                 <!-- mr-2 (between check and list item) -->
                 <section class="bg-white rounded-sm my-5 p-4 flex justify-start">
-                    <img class="w-[20px] h-[20px] border rounded-full border-susy-darker-light-gray" src="images/icon-check.svg" alt="check">
+                    <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="9" cx="10" cy="10" fill="#bde4ff" stroke="black" stroke-width="1" />
+                        <image height="9" width="11" x="5" y="5" href="images/icon-check.svg" />
+                    </svg>
+                    <!-- form? -->
                     <input class="text-[11px] mx-3" type="text" name="create-todo" id="create" size="40" placeholder="Create a new todo..">
                 </section>
 
@@ -26,8 +30,9 @@
                  overlinetext
                  change font color
                  unbold text -->
-                <ul class="divide-y divide-susy-darker-light-gray">
-                    <li class="rounded-sm bg-white text-[11px] p-4 flex justify-between">
+                <ul class="divide-y divide-s-darker-l-gray">
+                    <li class="rounded-sm bg-white text-[11px] p-4 flex">
+                        
                         Complete Todo App on Frontend Mentor
                     </li>
                     <li class="rounded-sm bg-white text-[11px] p-4 flex justify-between">

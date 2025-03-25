@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-    --color-susy-light-gray: #f8f8f8;
-    --color-susy-darker-light-gray: #e6e5eb;
+    --color-s-light-gray: #f8f8f8;
+    --color-s-darker-l-gray: #e6e5eb;
 }

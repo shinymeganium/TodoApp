@@ -7,7 +7,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
-    --color-amber-800: oklch(0.473 0.137 46.201);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -15,9 +14,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-semibold: 600;
-    --radius-xs: 0.125rem;
     --radius-sm: 0.25rem;
-    --radius-xl: 0.75rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -25,8 +22,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-susy-light-gray: #f8f8f8;
-    --color-susy-darker-light-gray: #e6e5eb;
+    --color-s-darker-l-gray: #e6e5eb;
   }
 }
 @layer base {
@@ -343,9 +339,6 @@
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
-  .m-10 {
-    margin: calc(var(--spacing) * 10);
-  }
   .mx-3 {
     margin-inline: calc(var(--spacing) * 3);
   }
@@ -354,9 +347,6 @@
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
-  }
-  .mr-3 {
-    margin-right: calc(var(--spacing) * 3);
   }
   .box-border {
     box-sizing: border-box;
@@ -445,9 +435,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-\[20px\] {
-    height: 20px;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -460,14 +447,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-\[20px\] {
-    width: 20px;
   }
   .w-\[375px\] {
     width: 375px;
@@ -899,9 +880,9 @@
       --tw-divide-y-reverse: 1;
     }
   }
-  .divide-susy-darker-light-gray {
+  .divide-s-darker-l-gray {
     :where(& > :not(:last-child)) {
-      border-color: var(--color-susy-darker-light-gray);
+      border-color: var(--color-s-darker-l-gray);
     }
   }
   .place-self-auto {
@@ -966,17 +947,8 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .rounded-sm {
     border-radius: var(--radius-sm);
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
-  .rounded-xs {
-    border-radius: var(--radius-xs);
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -1002,10 +974,6 @@
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
-  .rounded-t-full {
-    border-top-left-radius: calc(infinity * 1px);
-    border-top-right-radius: calc(infinity * 1px);
-  }
   .rounded-l {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
@@ -1023,10 +991,6 @@
   .rounded-b {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
-  }
-  .rounded-b-full {
-    border-bottom-right-radius: calc(infinity * 1px);
-    border-bottom-left-radius: calc(infinity * 1px);
   }
   .rounded-br {
     border-bottom-right-radius: 0.25rem;
@@ -1094,9 +1058,6 @@
     --tw-border-style: solid;
     border-style: solid;
   }
-  .border-susy-darker-light-gray {
-    border-color: var(--color-susy-darker-light-gray);
-  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1112,9 +1073,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-amber-800 {
-    background-color: var(--color-amber-800);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1123,9 +1081,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-susy-light-gray {
-    background-color: var(--color-susy-light-gray);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1445,6 +1400,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
